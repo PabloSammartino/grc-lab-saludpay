@@ -18,7 +18,7 @@ No te preocupes por los controles del Anexo A: los agregamos juntos en la correc
 
 ---
 
-### R-03 · Soporte que consulta fichas sin justificación
+### R-03 · Soporte que consulta fichas sin justificación — ✅ resuelto (ver registro)
 
 | | Probabilidad | Impacto | Riesgo | Nivel |
 |---|---|---|---|---|
@@ -33,7 +33,7 @@ No te preocupes por los controles del Anexo A: los agregamos juntos en la correc
 
 ---
 
-### R-04 · Skimming en la página de checkout
+### R-04 · Skimming en la página de checkout — ✅ resuelto (ver registro)
 
 | | Probabilidad | Impacto | Riesgo | Nivel |
 |---|---|---|---|---|
