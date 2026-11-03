@@ -1,4 +1,4 @@
-id,activo,tipo,descripcion,dueno,ubicacion,clasificacion,confidencialidad,integridad,disponibilidad,criticidad,datos_personales,datos_salud,ePHI_HIPAA,alcance_PCI
+﻿id,activo,tipo,descripcion,dueno,ubicacion,clasificacion,confidencialidad,integridad,disponibilidad,criticidad,datos_personales,datos_salud,ePHI_HIPAA,alcance_PCI
 A-001,Base de datos de pacientes AR,Información,PostgreSQL con datos de pacientes argentinos y turnos,CTO,AWS sa-east-1,Confidencial - Sensible,3,3,3,3,Sí,Sí,No,No
 A-002,Base de datos de pacientes EE.UU.,Información,PostgreSQL con datos de pacientes de clínicas de EE.UU.,CTO,AWS us-east-1,Confidencial - Sensible,3,3,3,3,Sí,Sí,Sí,No
 A-003,Base de notificaciones y eventos,Información,MongoDB con historial de mensajes enviados y eventos,CTO,AWS us-east-1,Confidencial,2,2,2,2,Sí,No,Sí,No

@@ -1,8 +1,11 @@
 # 02 · Gestión de riesgos
 
-⏳ **Próxima fase.** Entregables previstos (ver [PLAN.md](../PLAN.md#fase-2--gestión-de-riesgos-semana-34)):
+🚧 **En curso.**
 
-- Metodología de evaluación de riesgos (ISO 31000 / ISO 27005)
-- Registro de riesgos en CSV vinculado al inventario de activos
-- Plan de tratamiento de riesgos
-- Script de análisis y matriz de calor
+| # | Documento | Estado |
+|---|---|---|
+| 1 | [Metodología de gestión de riesgos](01-metodologia.md) | ✅ Borrador |
+| 2 | [Registro de riesgos](registro-riesgos.csv) | 🚧 2 de 8 riesgos evaluados |
+| 3 | [Ejercicio de evaluación R-03 a R-08](ejercicio-evaluacion.md) | 🚧 En curso |
+| 4 | Plan de tratamiento | 🔲 Pendiente |
+| 5 | Script de análisis y matriz de calor | 🔲 Pendiente |
