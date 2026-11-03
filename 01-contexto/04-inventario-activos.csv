@@ -1,0 +1,31 @@
+id,activo,tipo,descripcion,dueno,ubicacion,clasificacion,confidencialidad,integridad,disponibilidad,criticidad,datos_personales,datos_salud,ePHI_HIPAA,alcance_PCI
+A-001,Base de datos de pacientes AR,Información,PostgreSQL con datos de pacientes argentinos y turnos,CTO,AWS sa-east-1,Confidencial - Sensible,3,3,3,3,Sí,Sí,No,No
+A-002,Base de datos de pacientes EE.UU.,Información,PostgreSQL con datos de pacientes de clínicas de EE.UU.,CTO,AWS us-east-1,Confidencial - Sensible,3,3,3,3,Sí,Sí,Sí,No
+A-003,Base de notificaciones y eventos,Información,MongoDB con historial de mensajes enviados y eventos,CTO,AWS us-east-1,Confidencial,2,2,2,2,Sí,No,Sí,No
+A-004,Tokens y registros de transacciones,Información,"Tokens de pago, montos, estado y últimos 4 dígitos",CFO,AWS (ambas regiones),Confidencial,3,3,2,3,Sí,No,Sí,Conectado
+A-005,Reportes y adjuntos,Información,Archivos en S3 (reportes de clínicas y comprobantes),COO,AWS S3,Confidencial - Sensible,3,2,2,3,Sí,Sí,Sí,No
+A-006,Logs de aplicación,Información,Logs centralizados de la plataforma,Infraestructura,AWS us-east-1,Interno,2,3,2,2,Sí,Posible,Posible,No
+A-007,Backups,Información,Copias cifradas de las bases de datos,Infraestructura,AWS región secundaria,Confidencial - Sensible,3,3,3,3,Sí,Sí,Sí,No
+A-008,Código fuente,Información,Repositorios de la plataforma,CTO,GitHub (SaaS),Confidencial,3,3,2,3,No,No,No,Conectado
+A-009,Secretos y credenciales,Información,"Claves de API, contraseñas de servicios, certificados",Infraestructura,Gestor de secretos AWS,Restringido,3,3,3,3,No,No,No,Conectado
+A-010,Datos de empleados,Información,"Legajos, recibos de sueldo, datos bancarios",CFO (RRHH),Sistema de RRHH (SaaS),Confidencial,3,2,1,2,Sí,Posible,No,No
+A-011,Contratos con clientes y BAAs,Información,"Contratos, acuerdos de confidencialidad y BAAs",Legales,Google Drive,Confidencial,2,3,1,2,Sí,No,No,No
+A-101,Aplicación web de pacientes,Software,Front-end de reserva y pago (incluye página de checkout),CTO,AWS,Confidencial,2,3,3,3,Sí,Sí,Sí,Sí
+A-102,Panel de clínicas,Software,Aplicación para el personal de las clínicas,CTO,AWS,Confidencial,3,3,3,3,Sí,Sí,Sí,No
+A-103,Panel administrativo interno,Software,Back-office usado por soporte,COO,AWS (acceso por VPN),Confidencial,3,3,2,3,Sí,Sí,Sí,No
+A-104,API pública,Software,API para integraciones de clínicas,CTO,AWS,Confidencial,3,3,3,3,Sí,Sí,Sí,No
+A-105,App móvil,Software,Aplicación iOS/Android para pacientes,CTO,Tiendas de apps,Confidencial,2,3,2,2,Sí,Sí,Sí,No
+A-106,Pipeline CI/CD,Software,"Compilación, pruebas y despliegue automático",Infraestructura,GitHub Actions,Interno,2,3,2,3,No,No,No,Conectado
+A-201,Cuenta AWS de producción,Infraestructura,Cuenta cloud con todos los servicios productivos,Infraestructura,AWS,Restringido,3,3,3,3,Sí,Sí,Sí,Conectado
+A-202,Cuentas AWS de staging,Infraestructura,Entornos de prueba,Infraestructura,AWS,Interno,1,2,1,1,No,No,No,No
+A-203,VPN corporativa,Infraestructura,Acceso remoto a sistemas internos,Infraestructura,AWS,Interno,2,3,3,2,No,No,No,No
+A-204,Notebooks de empleados,Infraestructura,~90 equipos (macOS y Windows),COO,Oficina y hogares,Interno,2,2,2,2,Posible,Posible,Posible,No
+A-205,WAF y CDN,Infraestructura,Protección perimetral y distribución de contenido,Infraestructura,AWS,Interno,1,3,3,3,No,No,No,Sí
+A-301,Pasarela de pagos,Proveedor,Procesa los datos de tarjeta (iframe + API),CFO,Tercero,—,3,3,3,3,Sí,No,No,Sí
+A-302,AWS,Proveedor,Infraestructura cloud,CTO,Tercero,—,3,3,3,3,Sí,Sí,Sí,Conectado
+A-303,Proveedores de mensajería,Proveedor,"Envío de email, SMS y WhatsApp",COO,Tercero,—,2,2,2,2,Sí,No,Sí,No
+A-304,Google Workspace,Proveedor,"Correo, documentos e identidad corporativa (SSO)",COO,Tercero,—,2,2,2,2,Sí,No,No,No
+A-305,GitHub,Proveedor,Repositorios de código y CI/CD,CTO,Tercero,—,3,3,2,3,No,No,No,Conectado
+A-401,Equipo de desarrollo y QA,Personas,36 personas con acceso a código y staging,CTO,—,—,—,—,—,3,No,No,No,No
+A-402,Equipo de infraestructura,Personas,5 personas con acceso privilegiado a producción,CTO,—,—,—,—,—,3,Sí,Sí,Sí,Conectado
+A-403,Equipo de soporte,Personas,15 personas con acceso a datos de pacientes,COO,—,—,—,—,—,3,Sí,Sí,Sí,No

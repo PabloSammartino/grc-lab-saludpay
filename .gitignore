@@ -1,0 +1,14 @@
+# Nunca subir secretos ni datos reales
+*.key
+*.pem
+.env
+secrets/
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
+*.pyc
+# Salidas temporales
+output/
+*.tmp
