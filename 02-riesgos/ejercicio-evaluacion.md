@@ -48,7 +48,7 @@ No te preocupes por los controles del Anexo A: los agregamos juntos en la correc
 
 ---
 
-### R-05 · Fuga por exportación CSV
+### R-05 · Fuga por exportación CSV — ✅ resuelto (ver registro)
 
 | | Probabilidad | Impacto | Riesgo | Nivel |
 |---|---|---|---|---|
