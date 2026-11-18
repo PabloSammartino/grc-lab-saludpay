@@ -1,6 +1,6 @@
-# ✍️ Ejercicio · Evaluación de riesgos R-03 a R-08
+# ✍️ Evaluación de riesgos R-01 a R-08
 
-Ejercicio de evaluación de seis riesgos aplicando la [metodología](01-metodologia.md). R-01 y R-02 se usaron como modelo y están en el [registro](registro-riesgos.csv). Este documento conserva el razonamiento de cada evaluación y la principal lección que dejó.
+Razonamiento detrás de cada evaluación del [registro de riesgos](registro-riesgos.csv), aplicando la [metodología](01-metodologia.md). **R-01 y R-02** se resolvieron primero como **modelos de referencia**; **R-03 a R-08** se evaluaron como ejercicio a partir de esos modelos. Para cada riesgo se conserva la justificación de los números y la principal lección que dejó.
 
 **Estado:** ✅ Completo. Los resultados están cargados en el [registro de riesgos](registro-riesgos.csv).
 
@@ -8,6 +8,8 @@ Ejercicio de evaluación de seis riesgos aplicando la [metodología](01-metodolo
 
 | Riesgo | Inherente | Residual | Tratamiento | Lección clave |
 |---|---|---|---|---|
+| R-01 · Ransomware *(modelo)* | 🟥 20 | 🟥 15 | Mitigar | Un control mal diseñado (backups en la misma cuenta) no protege |
+| R-02 · Logs enviados a EE.UU. *(modelo)* | 🟧 12 | 🟧 12 | Mitigar | Un riesgo de cumplimiento es tan riesgo como un ataque |
 | R-03 · Soporte que consulta fichas | 🟥 16 | 🟥 16 | Mitigar | Un control que no apunta a la amenaza no baja el riesgo |
 | R-04 · Skimming en el checkout | 🟥 16 | 🟥 16 | Mitigar + evitar | Ataque a la cadena de suministro; prevenir + detectar |
 | R-05 · Exportación CSV | 🟥 20 | 🟥 16 | Mitigar | Responsable (clínica) vs. encargado (SaludPay) |
@@ -15,7 +17,39 @@ Ejercicio de evaluación de seis riesgos aplicando la [metodología](01-metodolo
 | R-07 · Phishing | 🟥 20 | 🟥 16 | Mitigar | Controles que apuntan pero son débiles |
 | R-08 · Notificación tardía | 🟥 16 | 🟧 12 | Mitigar | Separar el hecho del riesgo; lo legal se trata siempre |
 
+## Modelos de referencia
+
+### R-01 · Ransomware en la base de pacientes
+
+| | Probabilidad | Impacto | Riesgo | Nivel |
+|---|---|---|---|---|
+| Inherente | 4 | 5 | 20 | 🟥 Crítico |
+| Residual | 3 | 5 | 15 | 🟥 Crítico |
+
+- **Justificación:** el sector salud es de los más atacados por ransomware y SaludPay tiene claves de AWS sin MFA. El impacto es catastrófico: plataforma inoperativa varios días y posible exposición de datos de salud de más de 10.000 personas.
+- **Residual:** el MFA en la consola web y las alertas bajan algo la probabilidad. El impacto no baja: los backups están en la misma cuenta AWS que el atacante podría comprometer, y la restauración nunca se probó.
+- **Tratamiento:** mitigar.
+- **Acciones:** backups inmutables en una cuenta separada, MFA y credenciales temporales para todo acceso privilegiado, prueba de restauración trimestral y plan de respuesta a ransomware.
+- **Lección:** tener un control no alcanza si está mal diseñado. Un backup que el atacante puede borrar no protege contra el ransomware.
+
 ---
+
+### R-02 · Logs con datos personales enviados a EE.UU.
+
+| | Probabilidad | Impacto | Riesgo | Nivel |
+|---|---|---|---|---|
+| Inherente | 3 | 4 | 12 | 🟧 Alto |
+| Residual | 3 | 4 | 12 | 🟧 Alto |
+
+- **Justificación:** los logs de la plataforma argentina guardan nombre, DNI y motivo de consulta y se envían a EE.UU. sin un mecanismo legal que ampare la transferencia (art. 12, Ley 25.326). Una denuncia ante la AAIP podría derivar en una sanción y en la pérdida de clientes.
+- **Residual:** no hay ningún control que mitigue este riesgo, así que es igual al inherente.
+- **Tratamiento:** mitigar (obligatorio por tratarse de un incumplimiento legal).
+- **Acciones:** enmascarar o eliminar los datos personales de los logs, moverlos a la región sa-east-1 y, mientras tanto, firmar cláusulas contractuales modelo con el proveedor.
+- **Lección:** en GRC, un riesgo de cumplimiento normativo es tan riesgo como un ataque informático, y se evalúa con la misma metodología.
+
+---
+
+## Ejercicio: R-03 a R-08
 
 ### R-03 · Soporte que consulta fichas sin justificación
 
