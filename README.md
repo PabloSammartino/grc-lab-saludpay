@@ -25,8 +25,8 @@
 
 | Fase | Contenido | Estado |
 |---|---|---|
-| [01 · Contexto y alcance](01-contexto/) | Empresa, alcance del SGSI, arquitectura y flujos de datos, inventario de activos, registro de tratamientos de datos, partes interesadas y matriz legal | ✅ Completa |
-| [02 · Gestión de riesgos](02-riesgos/) | Metodología, registro de riesgos, plan de tratamiento | ⏳ Próxima |
+| [01 · Contexto y alcance](01-contexto/) | Empresa, alcance del SGSI, arquitectura y flujos de datos, inventario de activos, registro de tratamientos de datos, partes interesadas, matriz legal y análisis FODA | ✅ Completa |
+| [02 · Gestión de riesgos](02-riesgos/) | Metodología, registro de 8 riesgos evaluados, plan de tratamiento | 🚧 En curso |
 | [03 · SoA y políticas](03-soa-y-politicas/) | Declaración de Aplicabilidad (93 controles del Anexo A) y políticas clave | 🔲 Pendiente |
 | [04 · Mapeo normativo](04-mapeo-normativo/) | Matriz ISO 27001 ↔ PCI DSS ↔ HIPAA ↔ Ley 25.326 | 🔲 Pendiente |
 | [05 · Evidencias técnicas](05-evidencias-tecnicas/) | Laboratorio Linux/Docker, controles implementados y scripts de verificación | 🔲 Pendiente |
