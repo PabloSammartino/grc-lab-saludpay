@@ -93,7 +93,7 @@ No te preocupes por los controles del Anexo A: los agregamos juntos en la correc
 
 ---
 
-### R-08 · Notificación tardía de una brecha HIPAA
+### R-08 · Notificación tardía de una brecha HIPAA — ✅ resuelto (ver registro)
 
 | | Probabilidad | Impacto | Riesgo | Nivel |
 |---|---|---|---|---|
